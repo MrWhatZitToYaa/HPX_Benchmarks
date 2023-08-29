@@ -20,3 +20,6 @@ target_link_libraries(transform.out benchmark::benchmark)
 add_executable(correct_runtime_test.out correct_runtime_test.cpp)
 target_link_libraries(correct_runtime_test.out HPX::hpx HPX::wrap_main HPX::iostreams_component HPX::partitioned_vector_component)
 target_link_libraries(correct_runtime_test.out benchmark::benchmark)
+
+add_executable(custom_time_measurement.out custom_time_measurement.cpp)
+target_link_libraries(custom_time_measurement.out HPX::hpx HPX::wrap_main HPX::iostreams_component HPX::partitioned_vector_component)

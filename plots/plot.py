@@ -163,6 +163,6 @@ def plot_all(filePath: str, name: str):
 
 
 
-#plot_all("../Daniel/transform/measurements/", "transform")
-#plot_all("../Daniel/reduction/measurements/", "reduction")
+plot_all("../Daniel/transform/measurements/", "transform")
+plot_all("../Daniel/reduction/measurements/", "reduction")
 plot_all("../Daniel/scan/measurements/", "scan")

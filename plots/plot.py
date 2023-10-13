@@ -5,6 +5,7 @@ import math
 import re
 import os
 import glob
+from numpy import argsort
 
 patternForScientificNumbers = r'([+\-]?(?:0|[1-9]\d*)(?:\.\d+)?(?:[eE][+\-]?\d+)?)'
 patternForIntegers = r'[-]?\d+'
@@ -61,14 +62,15 @@ def plottingTime(name: str, filePath: str, fileNames: str):
 	plt.yticks(fontsize=14)
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
 	plt.title((capitalName + " computation times"), fontsize=20)
-	plt.xscale("log")
-	plt.yscale("log")
-	plt.xlabel("size of vector", fontsize=14)
-	plt.ylabel("time of slowest locality [s]", fontsize=14)
+	plt.xscale("log", base=2)
+	plt.yscale("log", base=10)
+	plt.xlabel("Number of elements in vector", fontsize=14)
+	plt.ylabel("Time of slowest locality [s]", fontsize=14)
 	plt.grid()
 
 	vectorSizes = []
 	times = []
+	numbers = []
 	labelStrings = []
 	# Extract the data and save it into a 2D list
 	for fileName in fileNames:
@@ -81,11 +83,14 @@ def plottingTime(name: str, filePath: str, fileNames: str):
 
 		# Create the correct label for the data
 		number = int(re.search(patternForIntegers, fileName).group())
+		numbers.append(number)
 		labelString = str(number) + " localities"
 		labelStrings.append(labelString)
 
-	for i in range(len(vectorSizes)):
-
+	# Plot the results in asending order of #localyties
+	numberIndices = argsort(numbers)
+				  
+	for i in numberIndices:
 		plt.plot(vectorSizes[i],
 				 times[i],
 				 marker='o',
@@ -104,14 +109,15 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str):
 	plt.yticks(fontsize=14)
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
 	plt.title((capitalName + " speedup"), fontsize=20)
-	plt.xscale("log")
+	plt.xscale("log", base=2)
 	#plt.yscale("log")
-	plt.xlabel("size of vector", fontsize=14)
-	plt.ylabel("speedup", fontsize=14)
+	plt.xlabel("Number of elements in vector", fontsize=14)
+	plt.ylabel("Speedup T[1] / T[n]", fontsize=14)
 	plt.grid()
 
 	vectorSizes = []
 	times = []
+	numbers = []
 	labelStrings = []
 
 	locality1VectorSize = []
@@ -127,6 +133,7 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str):
 
 		# Create the correct label for the data
 		number = int(re.search(patternForIntegers, fileName).group())
+		numbers.append(number)
 		labelString = str(number) + " localities"
 		labelStrings.append(labelString)
 
@@ -134,8 +141,10 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str):
 			locality1VectorSize = vectorSize
 			locality1Time = time
 
-
-	for i in range(len(vectorSizes)):
+	# Plot the results in asending order of #localyties
+	numberIndices = argsort(numbers)
+				  
+	for i in numberIndices:
 		speedup = [b / a for a, b in zip(times[i], locality1Time)]
 		
 		plt.plot(vectorSizes[i],
@@ -144,8 +153,57 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str):
 				 linestyle='none',
 				 label=labelStrings[i])
 	
+	plt.ylim(bottom=0)
 	plt.legend(fontsize=14)
 	plt.savefig((name + 'Speedup.png'), dpi=400)
+
+def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: int):
+	capitalName = name.capitalize()
+
+	plt.figure(figsize=(16, 9))
+	plt.xticks(fontsize=14, rotation=0)
+	plt.tick_params(axis='x', which='both', direction='in', length=8, width=1.5)
+	plt.yticks(fontsize=14)
+	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
+	plt.title((capitalName + " bandwidth"), fontsize=20)
+	plt.xscale("log", base=2)
+	plt.yscale("log", base=2)
+	plt.xlabel("Number of elements in vector", fontsize=14)
+	plt.ylabel("Bandwidth [bytes/s]", fontsize=14)
+	plt.grid()
+
+	vectorSizes = []
+	times = []
+	numbers = []
+	labelStrings = []
+	# Extract the data and save it into a 2D list
+	for fileName in fileNames:
+		fullFilePathAndName = filePath + fileName
+		with open(fullFilePathAndName, "r") as file:
+			lines = file.readlines()
+		vectorSize, time = extractDataFromLines(lines, capitalName)
+		vectorSizes.append(vectorSize)
+		times.append(time)
+
+		# Create the correct label for the data
+		number = int(re.search(patternForIntegers, fileName).group())
+		numbers.append(number)
+		labelString = str(number) + " localities"
+		labelStrings.append(labelString)
+
+	# Plot the results in asending order of #localyties
+	numberIndices = argsort(numbers)
+				  
+	for i in numberIndices:
+		bandwidth = [a * bytesPerNumber / b for a, b in zip(vectorSizes[i], times[i])]
+		plt.plot(vectorSizes[i],
+				 bandwidth,
+				 marker='o',
+				 linestyle='none',
+				 label=labelStrings[i])
+	
+	plt.legend(fontsize=14)
+	plt.savefig((name + 'Bandwidth.png'), dpi=400)
 
 def plot_all(filePath: str, name: str):
 	searchString = "_nodes.txt"
@@ -160,6 +218,7 @@ def plot_all(filePath: str, name: str):
 
 	plottingTime(name, filePath, fileNames)
 	plottingSpeedup(name, filePath, fileNames)
+	plottingBandwith(name, filePath, fileNames, 4)
 
 
 

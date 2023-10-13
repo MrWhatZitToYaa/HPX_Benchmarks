@@ -22,10 +22,6 @@ def extractDataFromLines(lines: str, patternName: str):
 	prefix="/runtime"
 	fullPatternForLineSearches = patternName + " Vector Size"
 
-	# Hotfix, only tmp
-	if(fullPatternForLineSearches == "Scan Vector Size"):
-		fullPatternForLineSearches = "using vector size"
-
 	for linenumber, line in enumerate(lines):
 		# Count number of equal lines
 		if fullPatternForLineSearches in line:
@@ -193,9 +189,14 @@ def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: i
 
 	# Plot the results in asending order of #localyties
 	numberIndices = argsort(numbers)
-				  
+	
+	# Transform uses 2 vectors, so double the data
+	multiplicator = 1
+	if name == "transform":
+		multiplicator = 2
+
 	for i in numberIndices:
-		bandwidth = [a * bytesPerNumber / b for a, b in zip(vectorSizes[i], times[i])]
+		bandwidth = [a * bytesPerNumber * multiplicator / b for a, b in zip(vectorSizes[i], times[i])]
 		plt.plot(vectorSizes[i],
 				 bandwidth,
 				 marker='o',

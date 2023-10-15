@@ -1,5 +1,5 @@
 1. Ins scripts-Verzeichnis wechseln
-2. load-env.sh ausführen
+2. . load-env.sh
 3. Ins build-verzeichnis wechseln
 4. cmake ..
 5. cmake --build .

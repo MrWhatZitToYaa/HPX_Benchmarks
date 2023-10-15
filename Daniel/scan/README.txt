@@ -1,6 +1,6 @@
 1. Ins scripts-Verzeichnis wechseln
 2. . load-env.sh
-3. Ins build-verzeichnis wechseln
+3. Ins build-Verzeichnis wechseln
 4. cmake ..
 5. cmake --build .
 6. Ins scripts-Verzeichnis wechseln

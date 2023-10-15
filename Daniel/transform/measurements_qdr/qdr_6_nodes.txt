@@ -1,0 +1,500 @@
+asc-qdr08
+asc-qdr12
+asc-qdr11
+asc-qdr09
+asc-qdr10
+asc-qdr13
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 32768
+Transform Vector Size: 32768
+Transform Vector Size: 32768
+Transform Vector Size: 32768
+Transform Vector Size: 32768
+Transform Vector Size: 32768
+/runtime{locality#0/total}/uptime,1,0.246172,[s],0.246172,[s]
+/runtime{locality#1/total}/uptime,1,0.246652,[s],0.246652,[s]
+/runtime{locality#2/total}/uptime,1,0.246876,[s],0.246876,[s]
+/runtime{locality#3/total}/uptime,1,0.248471,[s],0.248471,[s]
+/runtime{locality#4/total}/uptime,1,0.247287,[s],0.247287,[s]
+/runtime{locality#5/total}/uptime,1,0.243640,[s],0.24364,[s]
+[asc-qdr08:696515] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696515] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 65536
+Transform Vector Size: 65536
+Transform Vector Size: 65536
+Transform Vector Size: 65536
+Transform Vector Size: 65536
+Transform Vector Size: 65536
+/runtime{locality#0/total}/uptime,1,0.272424,[s],0.272424,[s]
+/runtime{locality#1/total}/uptime,1,0.272700,[s],0.2727,[s]
+/runtime{locality#2/total}/uptime,1,0.273324,[s],0.273324,[s]
+/runtime{locality#3/total}/uptime,1,0.273528,[s],0.273528,[s]
+/runtime{locality#4/total}/uptime,1,0.273570,[s],0.27357,[s]
+/runtime{locality#5/total}/uptime,1,0.273714,[s],0.273714,[s]
+[asc-qdr08:696576] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696576] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 131072
+Transform Vector Size: 131072
+Transform Vector Size: 131072
+Transform Vector Size: 131072
+Transform Vector Size: 131072
+Transform Vector Size: 131072
+/runtime{locality#0/total}/uptime,1,0.220789,[s],0.220789,[s]
+/runtime{locality#1/total}/uptime,1,0.221035,[s],0.221035,[s]
+/runtime{locality#2/total}/uptime,1,0.221568,[s],0.221568,[s]
+/runtime{locality#3/total}/uptime,1,0.221886,[s],0.221886,[s]
+/runtime{locality#4/total}/uptime,1,0.222012,[s],0.222012,[s]
+/runtime{locality#5/total}/uptime,1,0.222138,[s],0.222138,[s]
+[asc-qdr08:696634] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696634] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 262144
+Transform Vector Size: 262144
+Transform Vector Size: 262144
+Transform Vector Size: 262144
+Transform Vector Size: 262144
+Transform Vector Size: 262144
+/runtime{locality#0/total}/uptime,1,0.351236,[s],0.351236,[s]
+/runtime{locality#1/total}/uptime,1,0.351522,[s],0.351522,[s]
+/runtime{locality#2/total}/uptime,1,0.352331,[s],0.352331,[s]
+/runtime{locality#3/total}/uptime,1,0.352417,[s],0.352417,[s]
+/runtime{locality#4/total}/uptime,1,0.352483,[s],0.352483,[s]
+/runtime{locality#5/total}/uptime,1,0.352764,[s],0.352764,[s]
+[asc-qdr08:696692] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696692] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 524288
+Transform Vector Size: 524288
+Transform Vector Size: 524288
+Transform Vector Size: 524288
+Transform Vector Size: 524288
+Transform Vector Size: 524288
+/runtime{locality#0/total}/uptime,1,0.236196,[s],0.236196,[s]
+/runtime{locality#1/total}/uptime,1,0.236185,[s],0.236185,[s]
+/runtime{locality#2/total}/uptime,1,0.237149,[s],0.237149,[s]
+/runtime{locality#3/total}/uptime,1,0.237160,[s],0.23716,[s]
+/runtime{locality#4/total}/uptime,1,0.237475,[s],0.237475,[s]
+/runtime{locality#5/total}/uptime,1,0.237570,[s],0.23757,[s]
+[asc-qdr08:696750] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696750] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 1.04858e+06
+Transform Vector Size: 1.04858e+06
+Transform Vector Size: 1.04858e+06
+Transform Vector Size: 1.04858e+06
+Transform Vector Size: 1.04858e+06
+Transform Vector Size: 1.04858e+06
+/runtime{locality#0/total}/uptime,1,0.324148,[s],0.324148,[s]
+/runtime{locality#1/total}/uptime,1,0.324285,[s],0.324285,[s]
+/runtime{locality#2/total}/uptime,1,0.324936,[s],0.324936,[s]
+/runtime{locality#3/total}/uptime,1,0.325496,[s],0.325496,[s]
+/runtime{locality#4/total}/uptime,1,0.325434,[s],0.325434,[s]
+/runtime{locality#5/total}/uptime,1,0.325937,[s],0.325937,[s]
+[asc-qdr08:696808] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696808] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 2.09715e+06
+Transform Vector Size: 2.09715e+06
+Transform Vector Size: 2.09715e+06
+Transform Vector Size: 2.09715e+06
+Transform Vector Size: 2.09715e+06
+Transform Vector Size: 2.09715e+06
+/runtime{locality#0/total}/uptime,1,0.344120,[s],0.34412,[s]
+/runtime{locality#1/total}/uptime,1,0.344581,[s],0.344581,[s]
+/runtime{locality#2/total}/uptime,1,0.345354,[s],0.345354,[s]
+/runtime{locality#3/total}/uptime,1,0.345518,[s],0.345518,[s]
+/runtime{locality#4/total}/uptime,1,0.345539,[s],0.345539,[s]
+/runtime{locality#5/total}/uptime,1,0.345627,[s],0.345627,[s]
+[asc-qdr08:696865] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696865] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 4.1943e+06
+Transform Vector Size: 4.1943e+06
+Transform Vector Size: 4.1943e+06
+Transform Vector Size: 4.1943e+06
+Transform Vector Size: 4.1943e+06
+Transform Vector Size: 4.1943e+06
+/runtime{locality#0/total}/uptime,1,0.469620,[s],0.46962,[s]
+/runtime{locality#1/total}/uptime,1,0.470183,[s],0.470183,[s]
+/runtime{locality#2/total}/uptime,1,0.470764,[s],0.470764,[s]
+/runtime{locality#3/total}/uptime,1,0.470930,[s],0.47093,[s]
+/runtime{locality#4/total}/uptime,1,0.470974,[s],0.470974,[s]
+/runtime{locality#5/total}/uptime,1,0.471151,[s],0.471151,[s]
+[asc-qdr08:696922] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696922] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 8.38861e+06
+Transform Vector Size: 8.38861e+06
+Transform Vector Size: 8.38861e+06
+Transform Vector Size: 8.38861e+06
+Transform Vector Size: 8.38861e+06
+Transform Vector Size: 8.38861e+06
+/runtime{locality#0/total}/uptime,1,0.726280,[s],0.72628,[s]
+/runtime{locality#1/total}/uptime,1,0.726469,[s],0.726469,[s]
+/runtime{locality#2/total}/uptime,1,0.727259,[s],0.727259,[s]
+/runtime{locality#3/total}/uptime,1,0.727416,[s],0.727416,[s]
+/runtime{locality#4/total}/uptime,1,0.727601,[s],0.727601,[s]
+/runtime{locality#5/total}/uptime,1,0.727871,[s],0.727871,[s]
+[asc-qdr08:696979] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:696979] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 1.67772e+07
+Transform Vector Size: 1.67772e+07
+Transform Vector Size: 1.67772e+07
+Transform Vector Size: 1.67772e+07
+Transform Vector Size: 1.67772e+07
+Transform Vector Size: 1.67772e+07
+/runtime{locality#0/total}/uptime,1,1.147801,[s],1.1478,[s]
+/runtime{locality#1/total}/uptime,1,1.148392,[s],1.14839,[s]
+/runtime{locality#2/total}/uptime,1,1.149073,[s],1.14907,[s]
+/runtime{locality#3/total}/uptime,1,1.149195,[s],1.1492,[s]
+/runtime{locality#4/total}/uptime,1,1.149450,[s],1.14945,[s]
+/runtime{locality#5/total}/uptime,1,1.149582,[s],1.14958,[s]
+[asc-qdr08:697037] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697037] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 3.35544e+07
+Transform Vector Size: 3.35544e+07
+Transform Vector Size: 3.35544e+07
+Transform Vector Size: 3.35544e+07
+Transform Vector Size: 3.35544e+07
+Transform Vector Size: 3.35544e+07
+/runtime{locality#0/total}/uptime,1,2.123711,[s],2.12371,[s]
+/runtime{locality#1/total}/uptime,1,2.124232,[s],2.12423,[s]
+/runtime{locality#2/total}/uptime,1,2.124955,[s],2.12496,[s]
+/runtime{locality#3/total}/uptime,1,2.125316,[s],2.12532,[s]
+/runtime{locality#4/total}/uptime,1,2.125705,[s],2.1257,[s]
+/runtime{locality#5/total}/uptime,1,2.125559,[s],2.12556,[s]
+[asc-qdr08:697094] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697094] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 6.71089e+07
+Transform Vector Size: 6.71089e+07
+Transform Vector Size: 6.71089e+07
+Transform Vector Size: 6.71089e+07
+Transform Vector Size: 6.71089e+07
+Transform Vector Size: 6.71089e+07
+/runtime{locality#0/total}/uptime,1,3.834363,[s],3.83436,[s]
+/runtime{locality#1/total}/uptime,1,3.834646,[s],3.83465,[s]
+/runtime{locality#2/total}/uptime,1,3.835667,[s],3.83567,[s]
+/runtime{locality#3/total}/uptime,1,3.835547,[s],3.83555,[s]
+/runtime{locality#4/total}/uptime,1,3.835755,[s],3.83575,[s]
+/runtime{locality#5/total}/uptime,1,3.835826,[s],3.83583,[s]
+[asc-qdr08:697177] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697177] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 1.34218e+08
+Transform Vector Size: 1.34218e+08
+Transform Vector Size: 1.34218e+08
+Transform Vector Size: 1.34218e+08
+Transform Vector Size: 1.34218e+08
+Transform Vector Size: 1.34218e+08
+[asc-qdr08:697234] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697234] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,7.599703,[s],7.5997,[s]
+/runtime{locality#1/total}/uptime,1,7.600000,[s],7.6,[s]
+/runtime{locality#2/total}/uptime,1,7.600905,[s],7.6009,[s]
+/runtime{locality#3/total}/uptime,1,7.600942,[s],7.60094,[s]
+/runtime{locality#4/total}/uptime,1,7.601222,[s],7.60122,[s]
+/runtime{locality#5/total}/uptime,1,7.600931,[s],7.60093,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 2.68435e+08
+Transform Vector Size: 2.68435e+08
+Transform Vector Size: 2.68435e+08
+Transform Vector Size: 2.68435e+08
+Transform Vector Size: 2.68435e+08
+Transform Vector Size: 2.68435e+08
+[asc-qdr08:697291] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697291] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,15.196137,[s],15.1961,[s]
+/runtime{locality#1/total}/uptime,1,15.196648,[s],15.1966,[s]
+/runtime{locality#2/total}/uptime,1,15.197282,[s],15.1973,[s]
+/runtime{locality#3/total}/uptime,1,15.197213,[s],15.1972,[s]
+/runtime{locality#4/total}/uptime,1,15.197722,[s],15.1977,[s]
+/runtime{locality#5/total}/uptime,1,15.197769,[s],15.1978,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 5.36871e+08
+Transform Vector Size: 5.36871e+08
+Transform Vector Size: 5.36871e+08
+Transform Vector Size: 5.36871e+08
+Transform Vector Size: 5.36871e+08
+Transform Vector Size: 5.36871e+08
+[asc-qdr08:697348] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697348] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,28.959329,[s],28.9593,[s]
+/runtime{locality#1/total}/uptime,1,28.960081,[s],28.9601,[s]
+/runtime{locality#2/total}/uptime,1,28.961052,[s],28.9611,[s]
+/runtime{locality#3/total}/uptime,1,28.960925,[s],28.9609,[s]
+/runtime{locality#4/total}/uptime,1,28.961362,[s],28.9614,[s]
+/runtime{locality#5/total}/uptime,1,28.961335,[s],28.9613,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 1.07374e+09
+Transform Vector Size: 1.07374e+09
+Transform Vector Size: 1.07374e+09
+Transform Vector Size: 1.07374e+09
+Transform Vector Size: 1.07374e+09
+Transform Vector Size: 1.07374e+09
+[asc-qdr08:697442] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697442] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,62.537175,[s],62.5372,[s]
+/runtime{locality#1/total}/uptime,1,62.537456,[s],62.5375,[s]
+/runtime{locality#2/total}/uptime,1,62.538230,[s],62.5382,[s]
+/runtime{locality#3/total}/uptime,1,62.538439,[s],62.5384,[s]
+/runtime{locality#4/total}/uptime,1,62.538537,[s],62.5385,[s]
+/runtime{locality#5/total}/uptime,1,62.538597,[s],62.5386,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 2.14748e+09
+Transform Vector Size: 2.14748e+09
+Transform Vector Size: 2.14748e+09
+Transform Vector Size: 2.14748e+09
+Transform Vector Size: 2.14748e+09
+Transform Vector Size: 2.14748e+09
+[asc-qdr08:697532] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697532] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,120.552553,[s],120.553,[s]
+/runtime{locality#1/total}/uptime,1,120.552753,[s],120.553,[s]
+/runtime{locality#2/total}/uptime,1,120.553701,[s],120.554,[s]
+/runtime{locality#3/total}/uptime,1,120.553722,[s],120.554,[s]
+/runtime{locality#4/total}/uptime,1,120.553651,[s],120.554,[s]
+/runtime{locality#5/total}/uptime,1,120.553930,[s],120.554,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 4.29497e+09
+Transform Vector Size: 4.29497e+09
+Transform Vector Size: 4.29497e+09
+Transform Vector Size: 4.29497e+09
+Transform Vector Size: 4.29497e+09
+Transform Vector Size: 4.29497e+09
+[asc-qdr08:697660] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697660] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,232.963375,[s],232.963,[s]
+/runtime{locality#1/total}/uptime,1,232.963533,[s],232.964,[s]
+/runtime{locality#2/total}/uptime,1,232.964691,[s],232.965,[s]
+/runtime{locality#3/total}/uptime,1,232.964917,[s],232.965,[s]
+/runtime{locality#4/total}/uptime,1,232.964991,[s],232.965,[s]
+/runtime{locality#5/total}/uptime,1,232.965142,[s],232.965,[s]
+--------------------------------------------------------------------------
+The library attempted to open the following supporting CUDA libraries,
+but each of them failed.  CUDA-aware support is disabled.
+libcuda.so.1: cannot open shared object file: No such file or directory
+libcuda.dylib: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.so.1: cannot open shared object file: No such file or directory
+/usr/lib64/libcuda.dylib: cannot open shared object file: No such file or directory
+If you are not interested in CUDA-aware support, then run with
+--mca opal_warn_on_missing_libcuda 0 to suppress this message.  If you are interested
+in CUDA-aware support, then try setting LD_LIBRARY_PATH to the location
+of libcuda.so.1 to get passed this issue.
+--------------------------------------------------------------------------
+Transform Vector Size: 8.58993e+09
+Transform Vector Size: 8.58993e+09
+Transform Vector Size: 8.58993e+09
+Transform Vector Size: 8.58993e+09
+Transform Vector Size: 8.58993e+09
+Transform Vector Size: 8.58993e+09
+[asc-qdr08:697844] 5 more processes have sent help message help-mpi-common-cuda.txt / dlopen failed
+[asc-qdr08:697844] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+/runtime{locality#0/total}/uptime,1,456.294545,[s],456.295,[s]
+/runtime{locality#1/total}/uptime,1,456.294492,[s],456.294,[s]
+/runtime{locality#2/total}/uptime,1,456.294643,[s],456.295,[s]
+/runtime{locality#3/total}/uptime,1,456.295744,[s],456.296,[s]
+/runtime{locality#4/total}/uptime,1,456.295040,[s],456.295,[s]
+/runtime{locality#5/total}/uptime,1,456.294809,[s],456.295,[s]

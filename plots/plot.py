@@ -49,15 +49,16 @@ def extractDataFromLines(lines: str, patternName: str):
 	return vectorSize, time
 
 
-def plottingTime(name: str, filePath: str, fileNames: str):
+def plottingTime(name: str, filePath: str, fileNames: str, clusterName: str):
 	capitalName = name.capitalize()
+	clusterName = clusterName.capitalize()
 
 	plt.figure(figsize=(16, 9))
 	plt.xticks(fontsize=14, rotation=0)
 	plt.tick_params(axis='x', which='both', direction='in', length=8, width=1.5)
 	plt.yticks(fontsize=14)
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
-	plt.title((capitalName + " computation times"), fontsize=20)
+	plt.title((capitalName + " computation times on " + clusterName), fontsize=20)
 	plt.xscale("log", base=2)
 	plt.yscale("log", base=10)
 	plt.xlabel("Number of elements in vector", fontsize=14)
@@ -94,17 +95,18 @@ def plottingTime(name: str, filePath: str, fileNames: str):
 				 label=labelStrings[i])
 	
 	plt.legend(fontsize=14)
-	plt.savefig((name + 'Times.png'), dpi=400)
+	plt.savefig((name + clusterName + 'Times.png'), dpi=400)
 
-def plottingSpeedup(name: str, filePath: str, fileNames: str):
+def plottingSpeedup(name: str, filePath: str, fileNames: str, clusterName: str):
 	capitalName = name.capitalize()
+	clusterName = clusterName.capitalize()
 
 	plt.figure(figsize=(16, 9))
 	plt.xticks(fontsize=14, rotation=0)
 	plt.tick_params(axis='x', which='both', direction='in', length=8, width=1.5)
 	plt.yticks(fontsize=14)
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
-	plt.title((capitalName + " speedup"), fontsize=20)
+	plt.title((capitalName + " speedup on " + clusterName), fontsize=20)
 	plt.xscale("log", base=2)
 	#plt.yscale("log")
 	plt.xlabel("Number of elements in vector", fontsize=14)
@@ -151,17 +153,18 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str):
 	
 	plt.ylim(bottom=0)
 	plt.legend(fontsize=14)
-	plt.savefig((name + 'Speedup.png'), dpi=400)
+	plt.savefig((name + clusterName + 'Speedup.png'), dpi=400)
 
-def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: int):
+def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: int, clusterName: str):
 	capitalName = name.capitalize()
+	clusterName = clusterName.capitalize()
 
 	plt.figure(figsize=(16, 9))
 	plt.xticks(fontsize=14, rotation=0)
 	plt.tick_params(axis='x', which='both', direction='in', length=8, width=1.5)
 	plt.yticks(fontsize=14)
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
-	plt.title((capitalName + " bandwidth"), fontsize=20)
+	plt.title((capitalName + " bandwidth on " + clusterName), fontsize=20)
 	plt.xscale("log", base=2)
 	plt.yscale("log", base=2)
 	plt.xlabel("Number of elements in vector", fontsize=14)
@@ -204,9 +207,9 @@ def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: i
 				 label=labelStrings[i])
 	
 	plt.legend(fontsize=14)
-	plt.savefig((name + 'Bandwidth.png'), dpi=400)
+	plt.savefig((name + clusterName + 'Bandwidth.png'), dpi=400)
 
-def plot_all(filePath: str, name: str):
+def plot_all(filePath: str, name: str, clusterName: str):
 	searchString = "_nodes.txt"
 
 	# Use glob to find all files that match the search string in the directory
@@ -217,12 +220,15 @@ def plot_all(filePath: str, name: str):
 	if(len(fileNames) == 0):
 		raise ValueError("Data not found")
 
-	plottingTime(name, filePath, fileNames)
-	plottingSpeedup(name, filePath, fileNames)
-	plottingBandwith(name, filePath, fileNames, 4)
+	plottingTime(name, filePath, fileNames, clusterName)
+	plottingSpeedup(name, filePath, fileNames, clusterName)
+	plottingBandwith(name, filePath, fileNames, 4, clusterName)
 
 
 
-plot_all("../Daniel/transform/measurements/", "transform")
-plot_all("../Daniel/reduction/measurements/", "reduction")
-plot_all("../Daniel/scan/measurements/", "scan")
+plot_all("../Daniel/transform/measurements_qdr/", "transform", "qdr")
+plot_all("../Daniel/transform/measurements_rome/", "transform", "rome")
+plot_all("../Daniel/reduction/measurements_qdr/", "reduction", "qdr")
+plot_all("../Daniel/reduction/measurements_rome/", "reduction", "rome")
+plot_all("../Daniel/scan/measurements_qdr/", "scan", "qdr")
+plot_all("../Daniel/scan/measurements_rome/", "scan", "rome")

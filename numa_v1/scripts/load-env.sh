@@ -1,11 +1,11 @@
 #!/bin/bash
 
 echo "Setting up environment variables"
-spack load gcc@12.1.0
+spack load gcc@13.1.0
 spack load intel-oneapi-compilers@2023.1.0
-spack load intel-oneapi-tbb@2021.7.1%oneapi
-spack load benchmark@1.7.1
-spack load cmake@3.24.3%oneapi
+spack load intel-tbb@2021.9.0
+spack load benchmark@1.8.3
+spack load cmake@3.26.3%gcc@=13.1.0
 export CC=icx
 export CXX=icpx
 

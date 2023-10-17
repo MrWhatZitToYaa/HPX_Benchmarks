@@ -41,3 +41,4 @@
 **/*.cbp
 **/CMakeScripts
 **/compile_commands.json
+numa_v1/build/*

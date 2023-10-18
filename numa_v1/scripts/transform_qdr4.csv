@@ -1,0 +1,10 @@
+2023-10-18T11:02:37+02:00
+Running ./../build/transform-benchmark_qdr
+Run on (32 X 2600 MHz CPU s)
+CPU Caches:
+  L1 Data 16 KiB (x32)
+  L1 Instruction 64 KiB (x16)
+  L2 Unified 2048 KiB (x16)
+  L3 Unified 6144 KiB (x8)
+Load Average: 16.83, 17.38, 17.12
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.

@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-#SBATCH -p qdr 
-#SBATCH -w asc-qdr08
+#SBATCH -p qdr
+#SBATCH -N 8
 #SBATCH --exclusive
-#SBATCH -o benchmark_qdr.txt
+#SBATCH -o benchmark_qdr8.txt
+#SBATCH --job-name=qdr8
 
 
 REPS=50
@@ -11,11 +12,11 @@ export OMP_PLACES=numa_domains
 export OMP_PROC_BIND=true
 
 
-./../build/reduction-benchmark_qdr   --benchmark_time_unit=us --benchmark_out_format=csv --benchmark_out=reduction_qdr.csv \
+./../build/reduction-benchmark_qdr   --benchmark_time_unit=us --benchmark_out_format=csv --benchmark_out=reduction_qdr8.csv \
                                        --benchmark_report_aggregates_only=true --benchmark_repetitions=$REPS \
                                        --benchmark_min_time=0.001 --benchmark_min_warmup_time=0.01
 
-./../build/transform-benchmark_qdr   --benchmark_time_unit=us --benchmark_out_format=csv --benchmark_out=transform_qdr.csv  \
+./../build/transform-benchmark_qdr   --benchmark_time_unit=us --benchmark_out_format=csv --benchmark_out=transform_qdr8.csv  \
                                       --benchmark_report_aggregates_only=true --benchmark_repetitions=$REPS \
                                       --benchmark_min_time=0.001 --benchmark_min_warmup_time=0.01
 

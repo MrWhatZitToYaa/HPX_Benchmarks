@@ -1,0 +1,10 @@
+2023-10-18T09:59:22+02:00
+Running ./../build/transform-benchmark_rome
+Run on (128 X 2154.3 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x64)
+  L1 Instruction 32 KiB (x64)
+  L2 Unified 512 KiB (x64)
+  L3 Unified 16384 KiB (x16)
+Load Average: 18.74, 24.32, 20.80
+***WARNING*** CPU scaling is enabled, the benchmark real time measurements may be noisy and will incur extra overhead.

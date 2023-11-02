@@ -1,0 +1,37 @@
+asc-qdr08
+Transform Vector Size: 32768
+Elapsed Time == 0.010438 [s]
+Transform Vector Size: 65536
+Elapsed Time == 0.019645 [s]
+Transform Vector Size: 131072
+Elapsed Time == 0.040094 [s]
+Transform Vector Size: 262144
+Elapsed Time == 0.078702 [s]
+Transform Vector Size: 524288
+Elapsed Time == 0.152193 [s]
+Transform Vector Size: 1.04858e+06
+Elapsed Time == 0.298312 [s]
+Transform Vector Size: 2.09715e+06
+Elapsed Time == 0.612146 [s]
+Transform Vector Size: 4.1943e+06
+Elapsed Time == 1.273067 [s]
+Transform Vector Size: 8.38861e+06
+Elapsed Time == 2.375570 [s]
+Transform Vector Size: 1.67772e+07
+Elapsed Time == 4.977348 [s]
+Transform Vector Size: 3.35544e+07
+Elapsed Time == 9.529029 [s]
+Transform Vector Size: 6.71089e+07
+Elapsed Time == 19.497805 [s]
+Transform Vector Size: 1.34218e+08
+Elapsed Time == 38.199944 [s]
+Transform Vector Size: 2.68435e+08
+Elapsed Time == 76.825755 [s]
+Transform Vector Size: 5.36871e+08
+Elapsed Time == 154.306456 [s]
+Transform Vector Size: 1.07374e+09
+Elapsed Time == 317.932245 [s]
+Transform Vector Size: 2.14748e+09
+Elapsed Time == 642.290630 [s]
+Transform Vector Size: 4.29497e+09
+Elapsed Time == 1222.434536 [s]

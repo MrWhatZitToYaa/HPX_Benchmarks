@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=N7
+#SBATCH -p qdr
+#SBATCH -N 7
+
+###spack load hpx
+mpirun hostname
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 32768
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 65536
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 131072 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 262144 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 524288 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 1048576 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 2097152 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 4194304 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 8388608 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 16777216 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 33554432 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 67108864 
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 134217728 --loop_count 4 --warmup_loop_count 2
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 268435456 --loop_count 4 --warmup_loop_count 2
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 536870912 --loop_count 4 --warmup_loop_count 2
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 1073741824 --loop_count 2 --warmup_loop_count 2
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 2147483648 --loop_count 2 --warmup_loop_count 2
+mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 4294967296 --loop_count 2 --warmup_loop_count 2
+##mpirun ./../../build/main --hpx:ignore-batch-env --maxelems 8589934592 --loop_count 2 --warmup_loop_count 2

@@ -13,7 +13,7 @@ patternForIntegers = r'[-]?\d+'
 def comma_to_float(valstr: str):
 	return float(valstr.decode("utf-8").replace(',','.'))
 
-def extractDataFromLines(lines: str, patternName: str):
+def extractDataFromLinesWeird(lines: str, patternName: str):
 	vectorSize = []
 	time = []
 
@@ -48,6 +48,27 @@ def extractDataFromLines(lines: str, patternName: str):
 
 	return vectorSize, time
 
+def extractDataFromLinesCSV(lines: str, patternName: str):
+	vectorSize = []
+	time = []
+
+	for i, line in enumerate(lines):
+		if(i==0):
+			pass
+		else:
+			# Split the line into values using a comma as the delimiter
+			values = line.strip().split(',')
+			vectorSize.append(float(values[0]))
+
+			tmpTime = [float(item) for item in values[1:]]
+			mean = sum(tmpTime) / len(tmpTime)
+			mean /= 10
+			time.append(mean)
+	return vectorSize, time
+
+def extractDataFromLines(lines: str, patternName: str):
+	#return extractDataFromLinesWeird(lines, patternName)
+	return extractDataFromLinesCSV(lines, patternName)
 
 def plottingTime(name: str, filePath: str, fileNames: str, clusterName: str):
 	capitalName = name.capitalize()
@@ -95,7 +116,7 @@ def plottingTime(name: str, filePath: str, fileNames: str, clusterName: str):
 				 label=labelStrings[i])
 	
 	plt.legend(fontsize=14)
-	plt.savefig((name + clusterName + 'Times.png'), dpi=400)
+	plt.savefig((filePath + name + clusterName + 'Times.png'), dpi=400)
 
 def plottingSpeedup(name: str, filePath: str, fileNames: str, clusterName: str):
 	capitalName = name.capitalize()
@@ -153,7 +174,7 @@ def plottingSpeedup(name: str, filePath: str, fileNames: str, clusterName: str):
 	
 	plt.ylim(bottom=0)
 	plt.legend(fontsize=14)
-	plt.savefig((name + clusterName + 'Speedup.png'), dpi=400)
+	plt.savefig((filePath + name + clusterName + 'Speedup.png'), dpi=400)
 
 def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: int, clusterName: str):
 	capitalName = name.capitalize()
@@ -166,9 +187,9 @@ def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: i
 	plt.tick_params(axis='y', which='both', direction='in', length=8, width=1.5)
 	plt.title((capitalName + " bandwidth on " + clusterName), fontsize=20)
 	plt.xscale("log", base=2)
-	plt.yscale("log", base=2)
+	#plt.yscale("log", base=2)
 	plt.xlabel("Number of elements in vector", fontsize=14)
-	plt.ylabel("Bandwidth [bytes/s]", fontsize=14)
+	plt.ylabel("Bandwidth [GB/s]", fontsize=14)
 	plt.grid()
 
 	vectorSizes = []
@@ -200,20 +221,27 @@ def plottingBandwith(name: str, filePath: str, fileNames: str, bytesPerNumber: i
 
 	for i in numberIndices:
 		bandwidth = [a * bytesPerNumber * multiplicator / b for a, b in zip(vectorSizes[i], times[i])]
+		bandwidthInGB = [i * 1e-9 for i in bandwidth]
 		plt.plot(vectorSizes[i],
-				 bandwidth,
+				 bandwidthInGB,
 				 marker='o',
 				 linestyle='none',
 				 label=labelStrings[i])
 	
 	plt.legend(fontsize=14)
-	plt.savefig((name + clusterName + 'Bandwidth.png'), dpi=400)
+	plt.savefig((filePath + name + clusterName + 'Bandwidth.png'), dpi=400)
 
 def plot_all(filePath: str, name: str, clusterName: str):
-	searchString = "_nodes.txt"
+	startSequence  = clusterName
+	endSequence   = ".txt"
 
-	# Use glob to find all files that match the search string in the directory
-	matchingFiles = glob.glob(os.path.join(filePath, f"*{searchString}*"))
+	matchingFiles = []
+	for fullFilename in glob.glob(os.path.join(filePath, "*")):
+		fileName = os.path.basename(fullFilename)
+		
+		if re.match(f"{startSequence}.*{endSequence}$", fileName):
+			matchingFiles.append(fileName)
+	
 	# Extract just the file names from the full paths
 	fileNames = [os.path.basename(file) for file in matchingFiles]
 
@@ -221,14 +249,17 @@ def plot_all(filePath: str, name: str, clusterName: str):
 		raise ValueError("Data not found")
 
 	plottingTime(name, filePath, fileNames, clusterName)
+	print("Done plotting time for", name, clusterName)
 	plottingSpeedup(name, filePath, fileNames, clusterName)
+	print("Done speedup time for", name, clusterName)
 	plottingBandwith(name, filePath, fileNames, 4, clusterName)
+	print("Done bandwidth time for", name, clusterName)
 
 
 
-plot_all("../Daniel/transform/measurements_qdr/", "transform", "qdr")
-plot_all("../Daniel/transform/measurements_rome/", "transform", "rome")
-plot_all("../Daniel/reduction/measurements_qdr/", "reduction", "qdr")
-plot_all("../Daniel/reduction/measurements_rome/", "reduction", "rome")
-plot_all("../Daniel/scan/measurements_qdr/", "scan", "qdr")
-plot_all("../Daniel/scan/measurements_rome/", "scan", "rome")
+plot_all("./finalPlots/transform/", "transform", "qdr")
+#plot_all("./finalPlots/transform/", "transform", "rome")
+plot_all("./finalPlots/reduction/", "reduction", "qdr")
+#plot_all("./finalPlots/reduction/", "reduction", "rome")
+plot_all("./finalPlots/scan/", "scan", "qdr")
+#plot_all("./finalPlots/scan/", "scan", "rome")

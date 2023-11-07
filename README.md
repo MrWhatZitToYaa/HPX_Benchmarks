@@ -42,7 +42,7 @@ We did not find explicit information about this in the documentation. Therefore,
 ### General Information:
 Performance measurements are performed on the qdr-partition.
 
-We did not repeat the performance tests on the rome-partition, because there are currently problems on this partition, which lead to program terminations.
+We did not repeat the performance tests on the rome-partition, because there are currently problems on this partition, which lead to program crashes.
 
 
 

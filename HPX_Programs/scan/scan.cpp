@@ -141,12 +141,11 @@ int hpx_main(hpx::program_options::variables_map& vm)
         // L2 main_vector_view(5)                     2 2 2 2 2
         // main_vector:           2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
         
-        // reduce per locality the main_vector entries and save it via sums_per_locality_view:
         partitioned_vector_view<VALUETYPE> sums_per_locality_view(sums_per_locality);
         
         // warm-up cache
         for (int round = 1; round <= warmup_loop_count; ++round) {
-            
+            // reduce per locality the main_vector entries and save it via sums_per_locality_view:
             VALUETYPE result = hpx::reduce(hpx::execution::par, main_vector_view.begin() , main_vector_view.end());
             sums_per_locality_view[0] = result;
             
@@ -159,18 +158,10 @@ int hpx_main(hpx::program_options::variables_map& vm)
             
             // Wait for all localities to reach this point.
             hpx::distributed::barrier::synchronize();
-            
-            // Situation example after inclusive_scan (main_vector):
-            // 3 Localities (Lx):
-            // L0 main_vector_view(5) 2 4 6 8 10
-            // L1 main_vector_view(5)            2 4 6 8 10
-            // L2 main_vector_view(5)                       2 4 6 8 10
-            // main_vector:           2 4 6 8 10 2 4 6 8 10 2 4 6 8 10
-
         
             if (0 == hpx::get_locality_id())
             {
-                //sums_per_locality: 10 10 10 --> has to be changed to 10 20 30 via inclusive_scan:
+                //sums_per_locality: 10 10 10 --> has to be changed to 10 20 30 via inclusive_scan (locality 0 has access to the whole vector):
                 hpx::inclusive_scan(hpx::execution::par, sums_per_locality.begin(), sums_per_locality.end(), sums_per_locality.begin());
                 
                 //now we have to shift_right the transformed sums_per_locality --> from 10 20 30 to 10 10 20:
@@ -179,14 +170,14 @@ int hpx_main(hpx::program_options::variables_map& vm)
                      VALUETYPE x = sums_per_locality[i-1];
                      sums_per_locality[i] = x;
                 }
-                
-                sums_per_locality[0] = 0; // --> from 10 20 30 to 0 10 20:
+                // finally change it from 10 10 20 to 0 10 20:
+                sums_per_locality[0] = 0;
             }
             
             // Wait for all localities to reach this point.
             hpx::distributed::barrier::synchronize();
             
-            // make an inclusive_scan on the main_vector_view:
+            // make the final inclusive_scan on the main_vector_view and start with the respective value from sums_per_locality via the sums_per_locality_view:
             hpx::inclusive_scan(hpx::execution::par, main_vector_view.begin(), main_vector_view.end(), main_vector_view.begin(), std::plus<VALUETYPE>(), sums_per_locality_view[0]);
             
             }
@@ -197,43 +188,25 @@ int hpx_main(hpx::program_options::variables_map& vm)
             VALUETYPE result = hpx::reduce(hpx::execution::par, main_vector_view.begin() , main_vector_view.end());
             sums_per_locality_view[0] = result;
             
-            // Situation example (sums_per_locality):
-            // 3 Localities (Lx):
-            // L0 sums_per_locality_view[0]        10
-            // L1 sums_per_locality_view[0]           10
-            // L2 sums_per_locality_view[0]              10
-            // sums_per_locality:                  10 10 10
-            
             // Wait for all localities to reach this point.
             hpx::distributed::barrier::synchronize();
-            
-            // Situation example after inclusive_scan (main_vector):
-            // 3 Localities (Lx):
-            // L0 main_vector_view(5) 2 4 6 8 10
-            // L1 main_vector_view(5)            2 4 6 8 10
-            // L2 main_vector_view(5)                       2 4 6 8 10
-            // main_vector:           2 4 6 8 10 2 4 6 8 10 2 4 6 8 10
-
         
             if (0 == hpx::get_locality_id())
             {
-                //sums_per_locality: 10 10 10 --> has to be changed to 10 20 30 via inclusive_scan:
                 hpx::inclusive_scan(hpx::execution::par, sums_per_locality.begin(), sums_per_locality.end(), sums_per_locality.begin());
                 
-                //now we have to shift_right the transformed sums_per_locality --> from 10 20 30 to 10 10 20:
                 for (VALUETYPE i = sums_per_locality.size()-1; i != 0; --i)
                 {
                      VALUETYPE x = sums_per_locality[i-1];
                      sums_per_locality[i] = x;
                 }
                 
-                sums_per_locality[0] = 0; // --> from 10 20 30 to 0 10 20:
+                sums_per_locality[0] = 0;
             }
             
             // Wait for all localities to reach this point.
             hpx::distributed::barrier::synchronize();
             
-            // make an inclusive_scan on the main_vector_view:
             hpx::inclusive_scan(hpx::execution::par, main_vector_view.begin(), main_vector_view.end(), main_vector_view.begin(), std::plus<VALUETYPE>(), sums_per_locality_view[0]);
             
             }

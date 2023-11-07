@@ -282,9 +282,9 @@ def plot_all(filePath: str, name: str, clusterName: str):
 
 
 
-#plot_all("../HPX_Programs/transform/measurements_qdr/", "transform", "qdr")
+plot_all("../HPX_Programs/transform/measurements_qdr/", "transform", "qdr")
 #plot_all("./finalPlots/transform/", "transform", "rome")
-#plot_all("../HPX_Programs/reduction/measurements_qdr/", "reduction", "qdr")
+plot_all("../HPX_Programs/reduction/measurements_qdr/", "reduction", "qdr")
 #plot_all("./finalPlots/reduction/", "reduction", "rome")
 plot_all("../HPX_Programs/scan/measurements_qdr/", "scan", "qdr")
 #plot_all("./finalPlots/scan/", "scan", "rome")

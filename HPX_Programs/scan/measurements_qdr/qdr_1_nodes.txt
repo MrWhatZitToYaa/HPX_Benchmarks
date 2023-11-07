@@ -36,4 +36,4 @@ Elapsed Time == 2044.316056 [s]
 Scan Vector Size: 4.29497e+09
 Elapsed Time == 4130.179571 [s]
 Scan Vector Size: 8.58993e+09
-Elapsed Time == 8377.203984 [s]
+Elapsed Time == 8170.853653 [s]

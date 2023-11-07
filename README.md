@@ -1,5 +1,5 @@
 # HPX_Benchmarks
-Here we try out several different benchmarks, that run on a university cluster (Heidelberg) to evaluate the performance of the HPX runtime.
+Here we try out several different benchmarks, that run on a university cluster (Heidelberg) to evaluate the performance of the HPX runtime.<br><br>
 Our final results are placed in the *HPX_Programs* folder.
 
 ## Improvements after the Discussion on October 19, 2023

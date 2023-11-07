@@ -1,0 +1,79 @@
+asc-qdr08
+asc-qdr10
+asc-qdr09
+Transform Vector Size: 32768
+Elapsed Time == 0.004098 [s]
+Elapsed Time == 0.003695 [s]
+Elapsed Time == 0.004411 [s]
+Transform Vector Size: 65536
+Elapsed Time == 0.006443 [s]
+Elapsed Time == 0.007426 [s]
+Elapsed Time == 0.007878 [s]
+Transform Vector Size: 131072
+Elapsed Time == 0.011872 [s]
+Elapsed Time == 0.013628 [s]
+Elapsed Time == 0.013673 [s]
+Transform Vector Size: 262144
+Elapsed Time == 0.023002 [s]
+Elapsed Time == 0.026721 [s]
+Elapsed Time == 0.029502 [s]
+Transform Vector Size: 524288
+Elapsed Time == 0.050608 [s]
+Elapsed Time == 0.052198 [s]
+Elapsed Time == 0.054110 [s]
+Transform Vector Size: 1.04858e+06
+Elapsed Time == 0.098982 [s]
+Elapsed Time == 0.102395 [s]
+Elapsed Time == 0.103581 [s]
+Transform Vector Size: 2.09715e+06
+Elapsed Time == 0.184884 [s]
+Elapsed Time == 0.212539 [s]
+Elapsed Time == 0.219910 [s]
+Transform Vector Size: 4.1943e+06
+Elapsed Time == 0.353263 [s]
+Elapsed Time == 0.405715 [s]
+Elapsed Time == 0.470690 [s]
+Transform Vector Size: 8.38861e+06
+Elapsed Time == 0.693488 [s]
+Elapsed Time == 0.793579 [s]
+Elapsed Time == 0.808402 [s]
+Transform Vector Size: 1.67772e+07
+Elapsed Time == 1.451059 [s]
+Elapsed Time == 1.764361 [s]
+Elapsed Time == 1.786505 [s]
+Transform Vector Size: 3.35544e+07
+Elapsed Time == 2.885165 [s]
+Elapsed Time == 3.185607 [s]
+Elapsed Time == 3.347843 [s]
+Transform Vector Size: 6.71089e+07
+Elapsed Time == 5.817871 [s]
+Elapsed Time == 6.352470 [s]
+Elapsed Time == 6.484463 [s]
+Transform Vector Size: 1.34218e+08
+Elapsed Time == 11.844928 [s]
+Elapsed Time == 12.908607 [s]
+Elapsed Time == 14.656879 [s]
+Transform Vector Size: 2.68435e+08
+Elapsed Time == 24.349572 [s]
+Elapsed Time == 25.981344 [s]
+Elapsed Time == 26.765638 [s]
+Transform Vector Size: 5.36871e+08
+Elapsed Time == 47.570973 [s]
+Elapsed Time == 54.906388 [s]
+Elapsed Time == 55.521301 [s]
+Transform Vector Size: 1.07374e+09
+Elapsed Time == 90.125544 [s]
+Elapsed Time == 103.986176 [s]
+Elapsed Time == 106.999353 [s]
+Transform Vector Size: 2.14748e+09
+Elapsed Time == 185.856945 [s]
+Elapsed Time == 211.194271 [s]
+Elapsed Time == 206.769974 [s]
+Transform Vector Size: 4.29497e+09
+Elapsed Time == 358.539841 [s]
+Elapsed Time == 418.879796 [s]
+Elapsed Time == 420.372323 [s]
+Transform Vector Size: 8.58993e+09
+Elapsed Time == 723.358133 [s]
+Elapsed Time == 860.119806 [s]
+Elapsed Time == 877.671640 [s]

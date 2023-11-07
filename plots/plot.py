@@ -62,7 +62,6 @@ def extractDataFromLinesCSV(lines: str, patternName: str):
 
 			tmpTime = [float(item) for item in values[1:]]
 			mean = sum(tmpTime) / len(tmpTime)
-			mean /= 10
 			time.append(mean)
 	return vectorSize, time
 

@@ -1,0 +1,123 @@
+asc-qdr08
+asc-qdr09
+asc-qdr11
+asc-qdr10
+asc-qdr12
+Reduction Vector Size: 32768
+Elapsed Time == 0.005900 [s]
+Elapsed Time == 0.005894 [s]
+Elapsed Time == 0.005913 [s]
+Elapsed Time == 0.005910 [s]
+Elapsed Time == 0.005957 [s]
+Reduction Vector Size: 65536
+Elapsed Time == 0.007784 [s]
+Elapsed Time == 0.007791 [s]
+Elapsed Time == 0.007777 [s]
+Elapsed Time == 0.007791 [s]
+Elapsed Time == 0.007819 [s]
+Reduction Vector Size: 131072
+Elapsed Time == 0.013663 [s]
+Elapsed Time == 0.013666 [s]
+Elapsed Time == 0.013671 [s]
+Elapsed Time == 0.013688 [s]
+Elapsed Time == 0.013982 [s]
+Reduction Vector Size: 262144
+Elapsed Time == 0.025118 [s]
+Elapsed Time == 0.025118 [s]
+Elapsed Time == 0.025119 [s]
+Elapsed Time == 0.025121 [s]
+Elapsed Time == 0.025348 [s]
+Reduction Vector Size: 524288
+Elapsed Time == 0.048379 [s]
+Elapsed Time == 0.048364 [s]
+Elapsed Time == 0.048408 [s]
+Elapsed Time == 0.048402 [s]
+Elapsed Time == 0.048767 [s]
+Reduction Vector Size: 1.04858e+06
+Elapsed Time == 0.098265 [s]
+Elapsed Time == 0.098277 [s]
+Elapsed Time == 0.098282 [s]
+Elapsed Time == 0.098278 [s]
+Elapsed Time == 0.098578 [s]
+Reduction Vector Size: 2.09715e+06
+Elapsed Time == 0.187462 [s]
+Elapsed Time == 0.187487 [s]
+Elapsed Time == 0.187467 [s]
+Elapsed Time == 0.187488 [s]
+Elapsed Time == 0.187479 [s]
+Reduction Vector Size: 4.1943e+06
+Elapsed Time == 0.409984 [s]
+Elapsed Time == 0.409987 [s]
+Elapsed Time == 0.409965 [s]
+Elapsed Time == 0.409990 [s]
+Elapsed Time == 0.410357 [s]
+Reduction Vector Size: 8.38861e+06
+Elapsed Time == 0.788065 [s]
+Elapsed Time == 0.788113 [s]
+Elapsed Time == 0.788048 [s]
+Elapsed Time == 0.788076 [s]
+Elapsed Time == 0.788085 [s]
+Reduction Vector Size: 1.67772e+07
+Elapsed Time == 1.483099 [s]
+Elapsed Time == 1.483104 [s]
+Elapsed Time == 1.483101 [s]
+Elapsed Time == 1.483067 [s]
+Elapsed Time == 1.483116 [s]
+Reduction Vector Size: 3.35544e+07
+Elapsed Time == 3.040105 [s]
+Elapsed Time == 3.040096 [s]
+Elapsed Time == 3.040096 [s]
+Elapsed Time == 3.039562 [s]
+Elapsed Time == 3.040998 [s]
+Reduction Vector Size: 6.71089e+07
+Elapsed Time == 6.238487 [s]
+Elapsed Time == 6.238535 [s]
+Elapsed Time == 6.238546 [s]
+Elapsed Time == 6.238539 [s]
+Elapsed Time == 6.238519 [s]
+Reduction Vector Size: 1.34218e+08
+Elapsed Time == 11.884715 [s]
+Elapsed Time == 11.884673 [s]
+Elapsed Time == 11.883490 [s]
+Elapsed Time == 11.884824 [s]
+Elapsed Time == 11.883535 [s]
+Reduction Vector Size: 2.68435e+08
+Elapsed Time == 24.492667 [s]
+Elapsed Time == 24.492785 [s]
+Elapsed Time == 24.492698 [s]
+Elapsed Time == 24.492734 [s]
+Elapsed Time == 24.492770 [s]
+Reduction Vector Size: 5.36871e+08
+Elapsed Time == 46.927603 [s]
+Elapsed Time == 46.927374 [s]
+Elapsed Time == 46.926403 [s]
+Elapsed Time == 46.926707 [s]
+Elapsed Time == 46.927809 [s]
+Reduction Vector Size: 1.07374e+09
+Elapsed Time == 96.553219 [s]
+Elapsed Time == 96.553623 [s]
+Elapsed Time == 96.553621 [s]
+Elapsed Time == 96.553775 [s]
+Elapsed Time == 96.553719 [s]
+Reduction Vector Size: 2.14748e+09
+Elapsed Time == 194.666387 [s]
+Elapsed Time == 194.666426 [s]
+Elapsed Time == 194.664181 [s]
+Elapsed Time == 194.666518 [s]
+Elapsed Time == 194.664286 [s]
+Reduction Vector Size: 4.29497e+09
+Elapsed Time == 385.027514 [s]
+Elapsed Time == 385.028076 [s]
+Elapsed Time == 385.027560 [s]
+Elapsed Time == 385.027563 [s]
+Elapsed Time == 385.027525 [s]
+Reduction Vector Size: 8.58993e+09
+Elapsed Time == 769.294935 [s]
+Elapsed Time == 863.447823 [s]
+Elapsed Time == 863.442510 [s]
+Elapsed Time == 863.447832 [s]
+Elapsed Time == 863.448113 [s]
+
+
+
+

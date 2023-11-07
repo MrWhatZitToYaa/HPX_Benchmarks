@@ -65,9 +65,35 @@ def extractDataFromLinesCSV(lines: str, patternName: str):
 			time.append(mean)
 	return vectorSize, time
 
+def extractDataFromLinesStringFormatting(lines: str, pattenName: str):
+	#print(lines)
+	vector_sizes = []
+	elapsed_times = []
+	current_vector_size = None
+	current_times = []
+
+	for line in lines:
+		match = re.match(r'(?:Transform|Reduction|Scan) Vector Size: (\S+)', line)
+		if match:
+			if current_vector_size:
+				vector_sizes.append(float(current_vector_size))
+				elapsed_times.append(np.mean(current_times))
+				current_times = []
+			current_vector_size = match.group(1)
+		else:
+			time_match = re.search(r'Elapsed Time == ([\d.]+) \[s\]', line)
+			if time_match:
+				current_times.append(float(time_match.group(1)))
+
+	if current_vector_size:
+		vector_sizes.append(float(current_vector_size))
+		elapsed_times.append(np.mean(current_times))
+
+	return vector_sizes, elapsed_times
+
 def extractDataFromLines(lines: str, patternName: str):
 	#return extractDataFromLinesWeird(lines, patternName)
-	return extractDataFromLinesCSV(lines, patternName)
+	return extractDataFromLinesStringFormatting(lines, patternName)
 
 def plottingTime(name: str, filePath: str, fileNames: str, clusterName: str):
 	capitalName = name.capitalize()
@@ -256,9 +282,9 @@ def plot_all(filePath: str, name: str, clusterName: str):
 
 
 
-plot_all("./finalPlots/transform/", "transform", "qdr")
+#plot_all("../HPX_Programs/transform/measurements_qdr/", "transform", "qdr")
 #plot_all("./finalPlots/transform/", "transform", "rome")
-plot_all("./finalPlots/reduction/", "reduction", "qdr")
+#plot_all("../HPX_Programs/reduction/measurements_qdr/", "reduction", "qdr")
 #plot_all("./finalPlots/reduction/", "reduction", "rome")
-plot_all("./finalPlots/scan/", "scan", "qdr")
+plot_all("../HPX_Programs/scan/measurements_qdr/", "scan", "qdr")
 #plot_all("./finalPlots/scan/", "scan", "rome")

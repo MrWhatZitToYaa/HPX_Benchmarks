@@ -1,5 +1,5 @@
 # HPX_Benchmarks
-Here we try out several different benchmarks that are run on a university cluster (Heidelberg) to evaluate the performance of the HPX runtime.
+Here we try out several different benchmarks, that run on a university cluster (Heidelberg) to evaluate the performance of the HPX runtime.
 
 ## Improvements after the Discussion on October 19, 2023
 
@@ -37,4 +37,13 @@ We did not find explicit information about this in the documentation. Therefore,
 
 ### The following adjustment, in addition to the requested ones, was made: 
 1. We had to use *hpx::distributed::barrier* instead of *hpx::distributed::latch* for the “Reduction” and “Scan” due to the revised performance measurement process (execution in a loop).
+
+
+### General Information:
+Performance measurements are performed on the qdr-partition.
+
+We did not repeat the performance tests on the rome-partition, because there are currently problems on this partition, which lead to program terminations.
+
+
+
 
